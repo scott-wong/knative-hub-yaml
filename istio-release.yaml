@@ -310,8 +310,7 @@ spec:
         # This is the Go import path for the binary that is containerized
         # and substituted here.
         # image: gcr.io/knative-releases/knative.dev/net-istio/cmd/controller@sha256:d31c49a1f07584f0393d651b4f9befb845e64e6b55c9d244e046f309560b6d0e
-        # image: gcrxio/gcr.io_knative-releases_knative.dev_net-istio_cmd_controller
-        image: registry.cn-hangzhou.aliyuncs.com/knative_dev/net-istio_cmd_controller:0.14.0
+        image: gcrxio/gcr.io_knative-releases_knative.dev_net-istio_cmd_controller:v0.14.0
         resources:
           requests:
             cpu: 30m
@@ -384,8 +383,7 @@ spec:
         # This is the Go import path for the binary that is containerized
         # and substituted here.
         # image: gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook@sha256:b04b047b1c980191bcfb046b97ab0afd39e19e570be341ce0028483fc548aa22
-        # image: gcrxio/gcr.io_knative-releases_knative.dev_net-istio_cmd_webhook
-        image: registry.cn-hangzhou.aliyuncs.com/knative_dev/net-istio_cmd_webhook:0.14.0
+        image: gcrxio/gcr.io_knative-releases_knative.dev_net-istio_cmd_webhook:v0.14.0
         resources:
           requests:
             cpu: 20m

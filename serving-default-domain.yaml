@@ -33,7 +33,7 @@ spec:
         # This is the Go import path for the binary that is containerized
         # and substituted here.
         # image: gcr.io/knative-releases/knative.dev/serving/cmd/default-domain@sha256:3f9f0baebbb2ace4aaa6f38537f2a76aa9f02669d43b1a9d8386bf6497559257
-        image: gcrxio/gcr.io_knative-releases_knative.dev_serving_cmd_default-domain
+        image: gcrxio/gcr.io_knative-releases_knative.dev_serving_cmd_default-domain:v0.14.0
         args: ["-magic-dns=xip.io"]
         ports:
         - name: http

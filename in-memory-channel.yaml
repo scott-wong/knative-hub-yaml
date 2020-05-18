@@ -502,7 +502,8 @@ spec:
       serviceAccountName: imc-controller
       containers:
       - name: controller
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_controller@sha256:be6bf108d5f10dc113423efb52b5547352d295cabc22a6d332d61a7affe7356c
+        # image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_controller@sha256:be6bf108d5f10dc113423efb52b5547352d295cabc22a6d332d61a7affe7356c
+        image: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_in_memory_channel_controller:v0.14.0
         env:
         - name: CONFIG_LOGGING_NAME
           value: config-logging
@@ -515,7 +516,8 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         - name: DISPATCHER_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:5ddf8d202419a6c9cc54fa39543871aed289679179f630858af90eb6b563429b
+          # value: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:5ddf8d202419a6c9cc54fa39543871aed289679179f630858af90eb6b563429b
+          value: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_in_memory_channel_dispatcher:v0.14.0
         securityContext:
           allowPrivilegeEscalation: false
         ports:
@@ -559,7 +561,8 @@ spec:
       serviceAccountName: imc-dispatcher
       containers:
       - name: dispatcher
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:5ddf8d202419a6c9cc54fa39543871aed289679179f630858af90eb6b563429b
+        # image: gcr.io/knative-releases/knative.dev/eventing/cmd/in_memory/channel_dispatcher@sha256:5ddf8d202419a6c9cc54fa39543871aed289679179f630858af90eb6b563429b
+        image: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_in_memory_channel_dispatcher:v0.14.0
         env:
         - name: CONFIG_LOGGING_NAME
           value: config-logging
