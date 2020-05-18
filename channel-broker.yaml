@@ -186,7 +186,8 @@ spec:
       containers:
       - name: eventing-controller
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/channel_broker@sha256:d7024d7222a4bce860d08443f57b24297d0a03ad3fbacfb52228f03e01011024
+        # image: gcr.io/knative-releases/knative.dev/eventing/cmd/channel_broker@sha256:d7024d7222a4bce860d08443f57b24297d0a03ad3fbacfb52228f03e01011024
+        image: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_channel_broker:v0.14.0
         resources:
           requests:
             cpu: 100m
@@ -204,11 +205,13 @@ spec:
           value: knative.dev/eventing
         - # Broker
           name: BROKER_INGRESS_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/ingress@sha256:68132f1fdda6248198c597e8c07da304127610cc7332167ce9cae4b8519a92e7
+          # value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/ingress@sha256:68132f1fdda6248198c597e8c07da304127610cc7332167ce9cae4b8519a92e7
+          value: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_broker_ingress:v0.14.0
         - name: BROKER_INGRESS_SERVICE_ACCOUNT
           value: eventing-broker-ingress
         - name: BROKER_FILTER_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/filter@sha256:6ec7b1ff07e1f87104e9e7cb0f947c2a98a21bbf2db649b897e690ecbba6e883
+          # value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/filter@sha256:6ec7b1ff07e1f87104e9e7cb0f947c2a98a21bbf2db649b897e690ecbba6e883
+          value: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_broker_filter:v0.14.0
         - name: BROKER_FILTER_SERVICE_ACCOUNT
           value: eventing-broker-filter
         - name: BROKER_IMAGE_PULL_SECRET_NAME
@@ -258,7 +261,8 @@ spec:
       containers:
       - name: eventing-controller
         terminationMessagePolicy: FallbackToLogsOnError
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/channel_broker@sha256:d7024d7222a4bce860d08443f57b24297d0a03ad3fbacfb52228f03e01011024
+        # image: gcr.io/knative-releases/knative.dev/eventing/cmd/channel_broker@sha256:d7024d7222a4bce860d08443f57b24297d0a03ad3fbacfb52228f03e01011024
+        image: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_channel_broker:v0.14.0
         resources:
           requests:
             cpu: 100m
@@ -276,11 +280,13 @@ spec:
           value: knative.dev/eventing
         - # Broker
           name: BROKER_INGRESS_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/ingress@sha256:68132f1fdda6248198c597e8c07da304127610cc7332167ce9cae4b8519a92e7
+          # value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/ingress@sha256:68132f1fdda6248198c597e8c07da304127610cc7332167ce9cae4b8519a92e7
+          value: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_broker_ingress:v0.14.0          
         - name: BROKER_INGRESS_SERVICE_ACCOUNT
           value: eventing-broker-ingress
         - name: BROKER_FILTER_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/filter@sha256:6ec7b1ff07e1f87104e9e7cb0f947c2a98a21bbf2db649b897e690ecbba6e883
+          # value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/filter@sha256:6ec7b1ff07e1f87104e9e7cb0f947c2a98a21bbf2db649b897e690ecbba6e883
+          value: gcrxio/gcr.io_knative-releases_knative.dev_eventing_cmd_broker_filter:v0.14.0
         - name: BROKER_FILTER_SERVICE_ACCOUNT
           value: eventing-broker-filter
         - name: BROKER_IMAGE_PULL_SECRET_NAME
